@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+
+
+        </div>
+
+        <div class="col-sm-4">
+            <form action="" method="POST">
+
+                {% csrf_token%}
+                {{form.as_p}}
+                 <input type="submit" value="Update" class="btn btn-success">
+                 <a href="{% url 'home'%}" class="btn btn-primary"> Back To Home</a>
+              
+              
+              </form>
+              
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-4">
+    
+    
+            </div>
+    </div>
+</div>
+{% endblock content%}

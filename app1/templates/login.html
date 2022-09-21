@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+
+{% block content%}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+
+    </div>
+    <div class="col-sm-4">
+      <div class="form">
+        <form action="" method="POST">
+    
+            {% csrf_token%}
+            {% for fm in form %}
+              {{fm.label_tag}} {{fm}} {{fm.erros|striptags}} <br> <br>
+        
+            {% endfor  %}
+            <input type="submit" value="Login" class="btn btn-primary">
+            
+        </form>
+        <p>Create account <a href="{% url 'singup'%}">Singup</a> </p>
+        
+        
+    </div>
+    </div>
+    <div class="col-sm-4">
+
+    </div>
+  </div>
+</div>
+{% endblock content%}
